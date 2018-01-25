@@ -8,12 +8,22 @@
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-  <div class="site-container">
+  <header class="top">
+    <!--scroll menu and logo and RESIZE full sc to site size-->
     <img src="images/nyt-logo.svg">
     <p>Choose a section:</p>
-    <div class="site-header">
-      <!--scroll menu and logo and RESIZE (from full screen to auto after a selection-->
+    <div class="dropdown">
+      <select class="options">
+            <option value>Options...</option>
+            <option value="food">Food</option>
+            <option value="sports">Sports</option>
+            <option value="tech">Tech</option>
+            <option value="travel">Travel</option>
+            <option value="science">Science</option>
+            <option value="arts">Arts</option>
+      </select>
     </div>
+  </header>
     <section class="storygrid">
       <!--images and their descriptions-->
     </section>
