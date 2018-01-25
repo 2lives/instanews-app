@@ -7,8 +7,11 @@ url += '?' + $.param({
 $.ajax({
   url: url,
   method: 'GET',
-}).done(function(result) {
-  console.log(result);
+}).done(function(data) {
+  console.log(data.results);
 }).fail(function(err) {
   throw err
 });
+
+
+

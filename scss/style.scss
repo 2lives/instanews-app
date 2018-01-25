@@ -1,6 +1,6 @@
 //imported but not included in the stylesheet
 @import 'variables';
-@import 'mixins';
+@import 'mixin';
 
 //compiled in the stylesheet
 @import 'reset';
@@ -9,3 +9,7 @@
 @import 'header';
 @import 'content';
 @import 'footer';
+
+body {
+  font-family: 'Open Sans';
+}
