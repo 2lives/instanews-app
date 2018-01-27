@@ -1,0 +1,24 @@
+.top {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+
+p {
+  color: white;
+}
+
+img[src="images/nyt-logo.svg"] {
+  width: 50%;
+  height: 50%;
+  max-width: 200px;
+}
+
+body {
+  background: black;
+  font-family: $body-font;
+
+}
