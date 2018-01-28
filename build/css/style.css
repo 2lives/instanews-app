@@ -53,5 +53,9 @@ img[src="images/nyt-logo.svg"] {
   max-width: 200px; }
 
 body {
-  background: black;
+  background: blue;
   font-family: "Open Sans", Arial, sans-serif; }
+
+.storygrid {
+  max-width: 600px;
+  height: auto; }
