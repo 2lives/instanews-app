@@ -1,29 +1,64 @@
-.top {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-}
 
 p {
   color: white;
 }
 
-img[src="images/nyt-logo.svg"] {
-  width: 50%;
-  height: 50%;
-  max-width: 200px;
-}
-
 body {
-  background: blue;
+  background: black;
   font-family: $body-font;
+  margin: 0;
 
 }
 
 .storygrid {
-  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   height: auto;
+  margin: 0;
+}
+
+.tile{
+  width: 100%;
+  height: 420px;
+  position: relative;
+}
+
+.tile img {
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.tile p {
+  text-align: center;
+  background-color: black; opacity: 0.7;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
+// top 50 left 50 absolute -- gif
+
+@media (min-width: 480px) {
+  .storygrid{
+    flex-direction: row;
+
+  }
+
+  .tile {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tile{
+    max-width: 25%;
+  }
 }

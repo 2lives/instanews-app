@@ -1,41 +1,59 @@
-  $('.storygrid').hide();
+$(".storygrid").hide();
+$(".loadinggif").hide();
 
+$("#options").on("change", function() {
+$('.storygrid').empty();
+$('#heading'/*header*/).attr('class', 'top') 
+  $(".storygrid")
+    .delay(2000)
+    .fadeIn();
+  $('.loadinggif')
+  .fadeIn(1000).fadeOut(1000);
 
-
-  $('#options').on('change', function(){
-
-  $('.storygrid').delay(3000).show();
   
+ var val = $(this).val();
+  loadContent(val);
 });
-  var value = $('#options').val()
+
+function loadContent(value) {
   var url = "https://api.nytimes.com/svc/topstories/v2/" + value + ".json";
-  url += '?' + $.param({
-  'api-key': "033cf8ec92ed4c98b1eb0c9e33364101"
-});
+  url +=
+    "?" +
+    $.param({
+      "api-key": "c2cdfd9418b14bab99be7dd7925d88ac"
+    });
 
-$.ajax({
-  url: url,
-  method: 'GET',
-})
-  .done(function(data) {
-    
+  $.ajax({
+    url: url,
+    method: "GET"
+  })
+    .done(function(data) {
+      var i = 0;
+      while  (i <= 11) {
+        
+        var html = '';
+      if (data.results[i].multimedia[4].url) {
+        html += '<a target="_blank" href="data.results[i].url" class= "tile">';
+        html += '<img src="';
+        html += data.results[i].multimedia[4].url;
+        html += '"/>';
+        html += '<p> "';
+        html += data.results[i].abstract;
+        html += '"</p>'; 
+        html += '</a>'; 
+        
+        $('.storygrid').append(html);
 
-   for (var i = 0; i < 12; i++) {
+        i++;
 
-    $('.storygrid').append("<div>" + data.results [i].abstract + data.results [i].multimedia[3].url + "</div>" 
-  //  "<div>" + <img src='data.results [i].multimedia[4]'/> + "</div>"
- 
-  
-   );
-  }
+        console.log(data.results);
+      }    
+      }
+      })
 
- console.log(data) 
-  
 
- 
- })
-
-.fail(function(err) {
-  throw err
-  });
+    .fail(function(err) {
+      throw err;
+    });
+}
 

@@ -8,10 +8,14 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./build/css/style.css" />
 </head>
 <body>
-  <header class="top">
-    <!--scroll menu and logo and RESIZE full sc to site size-->
-    <img src="images/nyt-logo.svg">
+  <header id="heading" class="splash">
+    <!--scroll menu and logo and resize full sc to site size-->
+    <img alt="New York Times logo" src="images/nyt-logo.svg">
+    <div class="topsection">
     <p>Choose a section:</p>
+  <div class="loadinggif"> 
+    <img alt="Loading..." src="images/ajax-loader.gif" />
+  </div>
     <div class="dropmenu">
       <select id="options">
             <option value>Options...</option>
@@ -22,6 +26,7 @@
             <option value="science">Science</option>
             <option value="arts">Arts</option>
       </select>
+    </div>
     </div>
   </header>
     <section class="storygrid">
