@@ -147,12 +147,26 @@ img[src="images/ajax-loader.gif"] {
       width: 220px; } }
 
 p {
-  color: white; }
+  color: #ffffff; }
 
 body {
   background: black;
   font-family: "Open Sans", Arial, sans-serif;
-  margin: 0; }
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh; }
+
+.loadinggif {
+  display: none; }
 
 .storygrid {
   display: -webkit-box;

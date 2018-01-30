@@ -1,6 +1,6 @@
 
 p {
-  color: white;
+  color: #ffffff;
 }
 
 body {
@@ -8,6 +8,15 @@ body {
   font-family: $body-font;
   margin: 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+}
+
+.loadinggif {
+  display: none;
 }
 
 .storygrid {

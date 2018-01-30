@@ -1,13 +1,13 @@
 $(".storygrid").hide();
-$(".loadinggif").hide();
+// $(".loadinggif").hide();
 
 $("#options").on("change", function() {
 $('.storygrid').empty();
 $('#heading'/*header*/).attr('class', 'top') 
   $(".storygrid")
-    .delay(2000)
+    .delay(200)
     .fadeIn();
-  $('.loadinggif').fadeIn(300);
+  $('.loadinggif').show();
 
   
  var val = $(this).val();
@@ -35,7 +35,7 @@ function loadContent(value) {
         // console.log(data.results[i].multimedia);
         
       if (data.results[i].multimedia.length > 0) {
-        html += '<a target="_blank" href="data.results[i].url" class= "tile">';
+        html += '<a target="_blank" href="' + data.results[i].url + '" class= "tile">';
         html += '<img src="';
         html += data.results[i].multimedia[4].url;
         html += '"/>';
@@ -60,7 +60,7 @@ function loadContent(value) {
       throw err;
     })
     .always(function(){
-      $('.loadinggif').remove()
+      $('.loadinggif').hide()
       .delay(2000);
     });
 }
