@@ -16,6 +16,9 @@
 
 .loadinggif {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
 }
 
 
@@ -38,7 +41,6 @@ img[src="images/nyt-logo.svg"] {
 }
 
 img[src="images/ajax-loader.gif"] {
-  display: none;
   width: 140px;
   height: 140px;
 }

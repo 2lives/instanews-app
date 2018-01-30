@@ -49,7 +49,10 @@
     height: 20%; }
 
 .loadinggif {
-  position: absolute; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10; }
 
 .top {
   display: -webkit-box;
@@ -78,7 +81,6 @@ img[src="images/nyt-logo.svg"] {
   max-width: 200px; }
 
 img[src="images/ajax-loader.gif"] {
-  display: none;
   width: 140px;
   height: 140px; }
 

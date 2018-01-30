@@ -7,8 +7,7 @@ $('#heading'/*header*/).attr('class', 'top')
   $(".storygrid")
     .delay(2000)
     .fadeIn();
-  $('.loadinggif')
-  .fadeIn(1000).fadeOut(1000);
+  $('.loadinggif').fadeIn(300);
 
   
  var val = $(this).val();
@@ -32,7 +31,10 @@ function loadContent(value) {
       while  (i <= 11) {
         
         var html = '';
-      if (data.results[i].multimedia[4].url) {
+
+        // console.log(data.results[i].multimedia);
+        
+      if (data.results[i].multimedia.length > 0) {
         html += '<a target="_blank" href="data.results[i].url" class= "tile">';
         html += '<img src="';
         html += data.results[i].multimedia[4].url;
@@ -44,16 +46,22 @@ function loadContent(value) {
         
         $('.storygrid').append(html);
 
-        i++;
+      //   console.log(data.results);
+      }   
 
-        console.log(data.results);
-      }    
-      }
+      i++;
+
+      }// endwhile
+
       })
 
 
     .fail(function(err) {
       throw err;
+    })
+    .always(function(){
+      $('.loadinggif').remove()
+      .delay(2000);
     });
 }
 

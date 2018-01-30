@@ -1,0 +1,1 @@
+A instant news app created by using data accessed through an api. The data is updated asynchronously by using ajax. The site is styled with Sass css, and HTML is used for the markup. 
