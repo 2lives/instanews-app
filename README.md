@@ -8,8 +8,8 @@ To setup on your device, download from repo and run gulp in the file.
 
 Splash page, taken from a mobile perspective: 
 
-<img src="/readme-images/instanews app sc2.png.png>
+<img src="/readme-images/instanews app sc2.png">
 
 View of the site beyond the splash page: 
 
-<img src ="/readme-images/Instanews app sc1.png>
+<img src ="/readme-images/Instanews app sc1.png">
